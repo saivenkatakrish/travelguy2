@@ -1,0 +1,27 @@
+/* PlaceDetails.css */
+
+.place-details {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .place-details h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+  }
+  
+  .place-details p {
+    font-size: 1.2em;
+  }
+  
+  #map {
+    margin-top: 20px;
+    height: 500px;
+  }
+  #map {
+    width: 100%;
+    height: 500px;
+    background-color: #eaeaea; /* Make sure the div has some background color */
+  }
+  
+  

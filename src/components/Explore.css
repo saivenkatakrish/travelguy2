@@ -1,0 +1,49 @@
+.explore {
+  padding: 20px;
+  align-items: center;
+  background-size: cover;  
+  background-position: center;  
+  background-attachment: fixed; 
+  min-height: 100vh; 
+  
+} 
+
+.explore-section {
+  text-align: center;
+  margin-bottom: 40px;
+  background-color: aliceblue;
+ 
+  padding: 30px;  
+  border-radius: 15px;  
+}
+
+.explore-section h1 {
+  font-size: 36px;
+  color: #191414;
+}
+
+.explore-section h4 {
+  font-size: 20px;
+  color: #191414;
+}
+
+button {
+  background-color: #ff7043;
+  color: white;
+  padding: 15px 32px;
+  font-size: 16px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background-color: #ff7043;
+  transform: scale(1.05);
+}
+
+button:active {
+  background-color: #ff7043;
+  transform: scale(1);
+}
