@@ -1,8 +1,24 @@
-body {
+/* Reset default browser styles */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+/* Optional: Add box-sizing for all elements */
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+
+/*body {
   margin: 0;
   font-family: Arial, sans-serif;
   background-color: #f4f4f4;
   color: #333;
-
   
-}
+  padding: 0;
+  box-sizing: border-box;
+} */

@@ -1,0 +1,137 @@
+/* Reset default margins and padding */
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+  }
+
+/* General container styling */
+.travel-explorer {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+  
+/* Video Section Styling */
+.video-section {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    transition: opacity 0.8s ease-in-out; /* Smooth fade effect */
+    margin: 0; /* Ensure no margine above the section */
+    padding: 0;
+}
+  
+.full-screen-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video covers the entire container */
+    z-index: -1;
+}
+  
+.video-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+  
+.video-overlay h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #ff7043;
+}
+  
+.video-overlay p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+  
+.video-overlay button {
+    background-color: #ff7043;
+    color: white;
+    padding: 15px 32px;
+    font-size: 16px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+  
+.video-overlay button:hover {
+    background-color: darkorange;
+    transform: scale(1.05);
+}
+  
+/* Image Section Styling */
+.image-section {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Makes the image fixed while scrolling */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+    object-fit: contain;
+    position: relative;
+}
+  
+.image-overlay-content {
+    max-width: 800px;
+    background-color: rgba(17, 16, 16, 0.664); /* Adds a slight overlay */
+    padding: 20px;
+    border-radius: 10px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+
+    position:absolute;
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.image-overlay-content:hover {
+    transform: translateY(-10px); /* Raises the div */
+    background: rgba(0, 0, 0, 0.7); /* Makes it darker */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.4); /* Adds a more prominent shadow */
+    color: white; /* Changes text color to a bright, contrasting color */
+}
+  
+.image-overlay-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    /*color: #020211;*/
+    transition: color 0.3s ease; /* Ensures smooth color transition */
+}
+  
+.image-overlay-content p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    /*color: #020910;*/
+    transition: color 0.3s ease; /* Ensures smooth color transition */
+}
+ 
+
+/* Initially hidden state for the overlay */
+.image-overlay-content {
+    opacity: 0; /* Hidden */
+    transform: translateY(50px); /* Slightly off-screen */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transition */
+  }
+  
+  /* When the overlay is visible */
+  .image-overlay-content.visible {
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); /* Back to its original position */
+  }
+  
