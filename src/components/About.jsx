@@ -1,10 +1,14 @@
 import React from "react";
 import './About.css';
 import video from '../assets/travelling - Clipchamp.mp4';
+import CompanyHeader from "./CompanyHeader";
 
 const About = () => {
   return (
     <div className="about-container">
+
+      <CompanyHeader />
+
       {/* Background Video */}
       <div className="video-container">
         <video
