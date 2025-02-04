@@ -1,12 +1,12 @@
 import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
 import About from "./components/About";
-import Home from './components/Home'; 
+import Home from "./components/Home";
 import Explore from "./components/Explore";
 import Contact from "./components/Contact";
-import PlaceDetails from "./components/PlaceDetails"; // Import PlaceDetails component
-
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom"; // Removed unused Switch
-import "./App.css";
+import PlaceDetails from "./components/PlaceDetails";
+import District from "./components/District"; // Import District component
 
 const App = () => {
   return (
@@ -30,8 +30,13 @@ const App = () => {
             }
           />
 
-          <Route path="/explore" element={<Explore />} /> {/* Added explore route */}
-          <Route path="/contact" element={<Contact />} />
+          {/* Home Page */}
+          <Route path="/explore" element={<Explore />} />
+
+          {/* District Page (Displays districts based on selected state) */}
+          <Route path="/districts" element={<District />} />
+
+          {/* Place Details Page */}
           <Route path="/place-details" element={<PlaceDetails />} />
         </Routes>
       </div>
@@ -40,3 +45,4 @@ const App = () => {
 };
 
 export default App;
+

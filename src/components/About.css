@@ -1,64 +1,53 @@
 .about-container {
   position: relative;
-  display: flex;
-  justify-content: left;
-  align-items: left;
-  height: 100vh;
-  overflow: hidden; /* Ensures the video stays within the container */
-  text-align: center;
-}
-
-.video-container {
-  position: relative;
   width: 100%;
-  max-width: 100%; /* You can set a fixed width if needed */
-  height: 100%; /* Adjust this if you want a fixed height */
-  overflow: hidden;
+  height: 500vh; /* Ensures enough scrolling space */
+  background-color: black;
 }
 
-.background-video {
-  position: absolute;
+/* 🔹 Prevent early scrolling */
+.about-section {
+  position: sticky;
   top: 0;
-  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* 🔹 Unlock scrolling when the last image is fully displayed */
+.about-section.locked {
+  position: fixed;
+  top: 0;
+}
+
+/* 🔹 Fixed Branding */
+.text-container {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 3;
+}
+
+.brand-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+  font-style: italic;
+}
+
+/* 🔹 Image Display */
+.image-scroll-container {
+  position: absolute;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ensures the video covers the entire container */
-  z-index: -1; /* Sends the video behind other elements */
 }
 
-.about-content {
-  position: absolute;
-  max-width: 800px;
-  text-align: left;
-  color: white;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
-  z-index: 1; /* Ensures content is above the video */
-  padding-left: 50px;
-  margin-top: 20px;
-}
-
-.about-content h1 {
-  font-size: 3rem;
-  margin-bottom: 20px;
-  color: orange;
-  font-style: oblique;
-  text-align: left;
-}
-
-.about-content p {
-  font-size: 1.5rem;
-  line-height: 1.8;
-  color: rgb(255, 240, 220);
-  margin-top: 10px;
-}
-
-.video-overlay-title {
-  position: absolute;
-  top: 10%;
-  left: 50%;
-  transform: translateX(-50%);
-  color: white;
-  font-size: 2rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-  z-index: 2;
+.about-image {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  transition: opacity 0.8s ease-in-out;
 }

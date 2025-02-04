@@ -1,0 +1,34 @@
+.district-page {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .district-table {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    max-width: 500px;
+    margin: auto;
+  }
+  
+  .district-box {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.3s;
+  }
+  
+  .district-box:hover {
+    background-color: #e2e6ea;
+    transform: scale(1.05);
+  }
+  
+  .arrow {
+    font-size: 1.2rem;
+    color: #007bff;
+  }
+  
