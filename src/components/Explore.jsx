@@ -1,17 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Explore.css';
-import { states } from '../assets/data';
+import { regions } from '../assets/data';
 
 const Explore = () => {
   const navigate = useNavigate();
-  const firstRow = states.slice(0, 6);
-  const secondRow = states.slice(6, 12);
+  const [selectedRegion, setSelectedRegion] = useState(null);
 
-  const handleStateClick = (stateName) => {
-    navigate('/districts', { state: { stateName } });
+  const handleRegionClick = (regionName) => {
+    setSelectedRegion(regionName);
   };
 
+  const handleStateClick = (stateName) => {
+    navigate(`/districts?state=${encodeURIComponent(stateName)}`);
+  };
+  
   return (
     <div className="explore">
       <div className="hero">
@@ -19,32 +22,44 @@ const Explore = () => {
         <h4>Discover your next adventure with us!</h4>
       </div>
 
-      <div className="state-row">
-        {firstRow.map((state) => (
-          <div
-            key={state.name}
-            className="state-card"
-            onClick={() => handleScrollToState(state.name)}
-
+      {/* Region Selection */}
+      <div className="region-row">
+        {Object.keys(regions).map((region) => (
+          <button 
+            key={region} 
+            className="region-button" 
+            onClick={() => handleRegionClick(region)}
           >
-            <img src={state.image} alt={state.name} />
-            <h3>{state.name}</h3>
-          </div>
+            {region}
+          </button>
         ))}
       </div>
 
-      <div className="state-row">
-        {secondRow.map((state) => (
-          <div
-            key={state.name}
-            className="state-card"
-            onClick={() => handleStateClick(state.name)}
-          >
-            <img src={state.image} alt={state.name} />
-            <h3>{state.name}</h3>
-          </div>
-        ))}
-      </div>
+      {/* State Display */}
+      {selectedRegion && (
+        <div>
+          {regions[selectedRegion]
+            .reduce((rows, state, index) => {
+              if (index % 6 === 0) rows.push([]);
+              rows[rows.length - 1].push(state);
+              return rows;
+            }, [])
+            .map((row, rowIndex) => (
+              <div key={`row-${selectedRegion}-${rowIndex}`} className="state-row">
+                {row.map((state) => (
+                  <div
+                    key={`${selectedRegion}-${state.name}`} // Ensuring uniqueness
+                    className="state-card"
+                    onClick={() => handleStateClick(state.name)}
+                  >
+                    <img src={state.image} alt={state.name} />
+                    <h3>{state.name}</h3>
+                  </div>
+                ))}
+              </div>
+            ))}
+        </div>
+      )}
     </div>
   );
 };

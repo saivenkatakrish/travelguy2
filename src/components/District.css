@@ -1,34 +1,162 @@
+/* District Page */
 .district-page {
-    text-align: center;
-    padding: 20px;
-  }
-  
-  .district-table {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-    max-width: 500px;
-    margin: auto;
-  }
-  
-  .district-box {
-    background-color: #f8f9fa;
-    padding: 15px;
-    border-radius: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
-    transition: transform 0.2s, background-color 0.3s;
-  }
-  
-  .district-box:hover {
-    background-color: #e2e6ea;
-    transform: scale(1.05);
-  }
-  
-  .arrow {
-    font-size: 1.2rem;
-    color: #007bff;
-  }
-  
+  text-align: center;
+  padding: 20px;
+}
+
+/* District Table (Grid) */
+.district-table {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  max-width: 500px;
+  margin: auto;
+}
+
+/* District Box */
+.district-box {
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.3s;
+}
+
+.district-box:hover {
+  background-color: #e2e6ea;
+  transform: scale(1.05);
+}
+
+/* Arrow Styling */
+.arrow {
+  font-size: 1.2rem;
+  color: #007bff;
+}
+
+/* ---------------- */
+/* Popup Modal Box  */
+/* ---------------- */
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999; /* Ensures popup is above everything */
+}
+
+/* Popup Content */
+.popup-box {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 600px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+  text-align: center;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Popup Header - Image & Text */
+.popup-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.popup-image {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* District Name & Description */
+.popup-content {
+  flex: 1;
+}
+
+.popup-content h3 {
+  font-size: 22px;
+  margin: 0;
+}
+
+.popup-content p {
+  font-size: 16px;
+  color: #555;
+}
+
+/* Show Places Button */
+.toggle-btn {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.toggle-btn:hover {
+  background: #0056b3;
+}
+
+/* Close Button */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: none;
+  background: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* ---------------- */
+/* Famous Places   */
+/* ---------------- */
+
+.places-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 15px;
+  justify-content: center;
+}
+
+.place-box {
+  cursor: pointer;
+  width: 120px;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.place-box:hover {
+  transform: scale(1.05);
+}
+
+.place-image {
+  width: 100%;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+/* Fade-in effect for places */
+.places-section {
+  animation: fadeIn 0.5s ease-in-out;
+}

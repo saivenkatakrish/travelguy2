@@ -17,18 +17,42 @@
   color: #110606;
 }
 
-/* Keeps two rows, ensures no wrapping */
-.state-row {
+/* Region Selection */
+.region-row {
   display: flex;
-  justify-content: space-between;
-  flex-wrap: nowrap; /* Ensures exactly two rows, no auto-wrapping */
+  justify-content: center;
+  gap: 15px;
   margin-bottom: 20px;
 }
 
-/* Styling for state cards */
+.region-button {
+  padding: 10px 20px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007BFF;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.region-button:hover {
+  background-color: #0056b3;
+}
+
+/* State Display */
+.state-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+/* State Cards */
 .state-card {
-  width: 16%; /* Consistent width */
-  height: 250px; /* Adjusted height */
+  width: 16%;
+  height: 250px;
   background-color: #f0f0f0;
   border-radius: 8px;
   overflow: hidden;
@@ -41,14 +65,12 @@
   transform: scale(1.05);
 }
 
-/* Ensures images fully cover the card in landscape mode */
 .state-card img {
   width: 100%;
-  height: 100%; /* Full height */
-  object-fit: cover; /* Maintains landscape format */
+  height: 100%;
+  object-fit: cover;
 }
 
-/* Keeping your original text styling */
 .state-card h3 {
   font-size: 18px;
   color: #0a0101;
