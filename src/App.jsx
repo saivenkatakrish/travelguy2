@@ -5,7 +5,6 @@ import About from "./components/About";
 import Home from "./components/Home";
 import Explore from "./components/Explore";
 import Contact from "./components/Contact";
-import PlaceDetails from "./components/PlaceDetails";
 import District from "./components/District";
 import Places from "./components/Places";
 
@@ -39,9 +38,6 @@ const App = () => {
 
           {/* District Page (Displays districts based on selected state) */}
           <Route path="/districts" element={<District />} />
-
-          {/* Place Details Page (Handles query parameters for state, district, and place) */}
-          <Route path="/placedetails" element={<PlaceDetails />} />
 
           {/* Places Page (Displays places based on selected district) */}
           <Route path="/places" element={<Places />} />

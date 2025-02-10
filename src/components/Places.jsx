@@ -1,14 +1,30 @@
-import React from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import './Places.css';
 import { famousPlaces } from '../assets/data';
 
 const Places = () => {
   const location = useLocation();
-  const navigate = useNavigate();
   const params = new URLSearchParams(location.search);
   const stateName = params.get('state');
   const districtName = params.get('district');
+
+  const [userLocation, setUserLocation] = useState(null);
+
+  // Retrieve user's location once
+  useEffect(() => {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          const { latitude, longitude } = position.coords;
+          setUserLocation({ latitude, longitude });
+        },
+        () => {
+          console.warn('Geolocation not available or denied.');
+        }
+      );
+    }
+  }, []);
 
   // Validate state and district names
   if (!stateName || !districtName) {
@@ -18,35 +34,43 @@ const Places = () => {
   // Get famous places for the selected district
   const places = famousPlaces[districtName] || [];
 
-  // Handle navigation to place details
-  const handlePlaceClick = (placeName) => {
-    navigate(
-      `/placedetails?state=${encodeURIComponent(stateName)}&district=${encodeURIComponent(
-        districtName
-      )}&place=${encodeURIComponent(placeName)}`
-    );
+  // Redirect to Google Maps
+  const handleGoogleMapsRedirect = (place) => {
+    const [placeLat, placeLng] = place.location
+      .split(',')
+      .map((coord) => parseFloat(coord.trim()));
+
+    if (userLocation) {
+      const mapsUrl = `https://www.google.com/maps/dir/?api=1&origin=${userLocation.latitude},${userLocation.longitude}&destination=${placeLat},${placeLng}&travelmode=driving`;
+      window.open(mapsUrl, '_blank');
+    } else {
+      const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${placeLat},${placeLng}`;
+      window.open(mapsUrl, '_blank');
+    }
   };
-  
+
   return (
     <div className="places-page">
       <h2>
         Famous Places in {districtName}, {stateName}
       </h2>
-      <div className="places-row">
+      <div className="places-grid">
         {places.length > 0 ? (
           places.map((place) => (
             <div
               key={place.name}
               className="place-card"
-              onClick={() => handlePlaceClick(place.name)}
-              aria-label={`View details about ${place.name}`}
+              onClick={() => handleGoogleMapsRedirect(place)}
             >
               <img
                 src={place.image || '/placeholder-image.jpg'}
                 alt={place.name}
                 className="place-image"
               />
-              <h3>{place.name}</h3>
+              <div className="place-details">
+                <h3>{place.name}</h3>
+                <p className="place-description">{place.description}</p>
+              </div>
             </div>
           ))
         ) : (

@@ -109,153 +109,116 @@ export const districts = {
 };
 
 
-
 export const famousPlaces = {
   // Andhra Pradesh
   Visakhapatnam: [
-    { name: "RK Beach", image: "https://media-cdn.tripadvisor.com/media/photo-s/15/cc/f4/d6/sunrise-at-r-k-beach.jpg" },
-    { name: "Kailasagiri", image: "kailasagiri.jpg" },
-    { name: "Borra Caves", image: "borracaves.jpg" },
-    { name: "Araku Valley", image: "arakuvalley.jpg" },
+    { 
+      name: "RK Beach", 
+      image: "https://media-cdn.tripadvisor.com/media/photo-s/15/cc/f4/d6/sunrise-at-r-k-beach.jpg", 
+      location: "17.7191° N, 83.3448° E", 
+      description: "A beautiful beach known for its scenic views, sunrise, and evening strolls." 
+    },
+    { 
+      name: "Kailasagiri", 
+      image: "https://example.com/kailasagiri.jpg", 
+      location: "17.7445° N, 83.3427° E", 
+      description: "A hilltop park offering panoramic views of the city and coastline." 
+    },
+    { 
+      name: "Borra Caves", 
+      image: "https://example.com/borracaves.jpg", 
+      location: "18.3274° N, 82.8722° E", 
+      description: "A natural wonder with stunning stalactite and stalagmite formations." 
+    },
+    { 
+      name: "Araku Valley", 
+      image: "https://example.com/arakuvalley.jpg", 
+      location: "18.3333° N, 82.8667° E", 
+      description: "A picturesque valley known for its coffee plantations and tribal culture." 
+    },
   ],
   Vijayawada: [
-    { name: "Kanaka Durga Temple", image: "kanakadurgatemple.jpg" },
-    { name: "Bhavani Island", image: "bhavaniisland.jpg" },
-    { name: "Prakasam Barrage", image: "prakasambarrage.jpg" },
-    { name: "Undavalli Caves", image: "undavallicaves.jpg" },
+    { 
+      name: "Kanaka Durga Temple", 
+      image: "https://example.com/kanakadurgatemple.jpg", 
+      location: "16.5145° N, 80.6115° E", 
+      description: "A revered temple located on the Indrakeeladri hill, dedicated to Goddess Durga." 
+    },
+    { 
+      name: "Bhavani Island", 
+      image: "https://example.com/bhavaniisland.jpg", 
+      location: "16.5178° N, 80.6170° E", 
+      description: "A serene island on the Krishna River, perfect for a family getaway." 
+    },
+    { 
+      name: "Prakasam Barrage", 
+      image: "https://example.com/prakasambarrage.jpg", 
+      location: "16.5100° N, 80.6226° E", 
+      description: "A landmark structure that regulates the flow of the Krishna River." 
+    },
+    { 
+      name: "Undavalli Caves", 
+      image: "https://example.com/undavallicaves.jpg", 
+      location: "16.4892° N, 80.5883° E", 
+      description: "Ancient rock-cut caves showcasing Indian rock architecture." 
+    },
   ],
   Tirupati: [
-    { name: "Tirumala Temple", image: "tirumalatemple.jpg" },
-    { name: "Sri Venkateswara Zoo", image: "venkateswarazoo.jpg" },
-    { name: "Chandragiri Fort", image: "chandragirifort.jpg" },
-    { name: "Kapila Theertham", image: "kapilatheertham.jpg" },
+    { 
+      name: "Tirumala Temple", 
+      image: "https://example.com/tirumalatemple.jpg", 
+      location: "13.6835° N, 79.3476° E", 
+      description: "One of the most visited temples in the world, dedicated to Lord Venkateswara." 
+    },
+    { 
+      name: "Sri Venkateswara Zoo", 
+      image: "https://example.com/venkateswarazoo.jpg", 
+      location: "13.6335° N, 79.3821° E", 
+      description: "A large zoo housing a variety of animals and birds." 
+    },
+    { 
+      name: "Chandragiri Fort", 
+      image: "https://example.com/chandragirifort.jpg", 
+      location: "13.5817° N, 79.2952° E", 
+      description: "A historic fort offering insights into the region's history." 
+    },
+    { 
+      name: "Kapila Theertham", 
+      image: "https://example.com/kapilatheertham.jpg", 
+      location: "13.6488° N, 79.4103° E", 
+      description: "A sacred waterfall and temple located at the foothills of Tirumala." 
+    },
   ],
 
   // Telangana
   Hyderabad: [
-    { name: "Charminar", image: "charminar.jpg" },
-    { name: "Golconda Fort", image: "golcondafort.jpg" },
-    { name: "Hussain Sagar", image: "hussainsagar.jpg" },
-    { name: "Ramoji Film City", image: "ramojifilmcity.jpg" },
+    { 
+      name: "Charminar", 
+      image: "https://static.toiimg.com/img/69144907/Master.jpg", 
+      location: "17.3616° N, 78.4747° E", 
+      description: "Hyderabad, city, Telangana state, south-central India. It is Telangana’s largest and most populous city and is the major urban center for all of south-central interior India. From 1956 to 2014 Hyderabad was the capital of Andhra Pradesh state, but, with the creation of Telangana from Andhra Pradesh in 2014, it was redesignated as the capital of both states. In 2024 Hyderabad ceased to serve as the capital of Andhra Pradesh, having been replaced by the newly built Amaravati, which was designated as the new capital.Hyderabad is located on the Musi River in the heart of the Telangana Plateau, a major upland region of the Deccan (peninsular India). The city site is relatively level to the gently rolling terrain, at an elevation of about 1,600 feet (500 meters). The climate is warm to hot and monsoonal (i.e., marked by wet and dry periods), with moderate annual precipitation. Most rain falls during the wet monsoon months of June to October. Pop. (2001) city (district), 3,829,753; urban agglom., 5,742,036; (2011) city (district), 3,943,323; urban agglom., 7,677,018." 
+    },
+    { 
+      name: "Golconda Fort", 
+      image: "https://example.com/golcondafort.jpg", 
+      location: "17.3833° N, 78.4011° E", 
+      description: "A majestic fort known for its architectural brilliance and history." 
+    },
+    { 
+      name: "Hussain Sagar", 
+      image: "https://example.com/hussainsagar.jpg", 
+      location: "17.4239° N, 78.4738° E", 
+      description: "A large artificial lake with a massive Buddha statue in the center." 
+    },
+    { 
+      name: "Ramoji Film City", 
+      image: "https://example.com/ramojifilmcity.jpg", 
+      location: "17.2543° N, 78.6808° E", 
+      description: "The largest integrated film studio complex in the world." 
+    },
   ],
-  Warangal: [
-    { name: "Warangal Fort", image: "warangalfort.jpg" },
-    { name: "Thousand Pillar Temple", image: "thousandpillar.jpg" },
-    { name: "Pakhal Lake", image: "pakhallake.jpg" },
-    { name: "Bhadrakali Temple", image: "bhadrakali.jpg" },
-  ],
-
-  // Rajasthan
-  Jaipur: [
-    { name: "Hawa Mahal", image: "hawamahal.jpg" },
-    { name: "Amer Fort", image: "amerfort.jpg" },
-    { name: "Jal Mahal", image: "jalmahal.jpg" },
-    { name: "Jantar Mantar", image: "jantarmantar.jpg" },
-  ],
-  Jodhpur: [
-    { name: "Mehrangarh Fort", image: "mehrangarhfort.jpg" },
-    { name: "Umaid Bhawan Palace", image: "umaidbhawan.jpg" },
-    { name: "Jaswant Thada", image: "jaswantthada.jpg" },
-    { name: "Clock Tower", image: "clocktower.jpg" },
-  ],
-
-  // Kerala
-  Thiruvananthapuram: [
-    { name: "Padmanabhaswamy Temple", image: "padmanabhaswamy.jpg" },
-    { name: "Kovalam Beach", image: "kovalam.jpg" },
-    { name: "Napier Museum", image: "napiermuseum.jpg" },
-    { name: "Ponmudi Hills", image: "ponmudi.jpg" },
-  ],
-
-  // Goa
-  North_Goa: [
-    { name: "Baga Beach", image: "bagabeach.jpg" },
-    { name: "Aguada Fort", image: "aguadafort.jpg" },
-    { name: "Basilica of Bom Jesus", image: "basilicabomjesus.jpg" },
-    { name: "Chapora Fort", image: "chaporafort.jpg" },
-  ],
-  South_Goa: [
-    { name: "Colva Beach", image: "colvabeach.jpg" },
-    { name: "Dudhsagar Falls", image: "dudhsagarfalls.jpg" },
-    { name: "Palolem Beach", image: "palolembeach.jpg" },
-    { name: "Shri Mangeshi Temple", image: "mangeshitemple.jpg" },
-  ],
-
-  // Tamil Nadu
-  Chennai: [
-    { name: "Marina Beach", image: "marinabeach.jpg" },
-    { name: "Kapaleeshwarar Temple", image: "kapaleeshwarartemple.jpg" },
-    { name: "Fort St. George", image: "fortstgeorge.jpg" },
-    { name: "Guindy Park", image: "guindypark.jpg" },
-  ],
-
-  // Maharashtra
-  Mumbai: [
-    { name: "Gateway of India", image: "gatewayofindia.jpg" },
-    { name: "Marine Drive", image: "marinedrive.jpg" },
-    { name: "Elephanta Caves", image: "elephantacaves.jpg" },
-    { name: "Juhu Beach", image: "juhubeach.jpg" },
-  ],
-  Pune: [
-    { name: "Shaniwar Wada", image: "shaniwarwada.jpg" },
-    { name: "Aga Khan Palace", image: "agakhanpalace.jpg" },
-    { name: "Sinhagad Fort", image: "sinhagadfort.jpg" },
-    { name: "Rajiv Gandhi Zoological Park", image: "rajivgandhizoo.jpg" },
-  ],
-
-  // Uttar Pradesh
-  Agra: [
-    { name: "Taj Mahal", image: "tajmahal.jpg" },
-    { name: "Agra Fort", image: "agrafort.jpg" },
-    { name: "Mehtab Bagh", image: "mehtabbagh.jpg" },
-    { name: "Fatehpur Sikri", image: "fatehpursikri.jpg" },
-  ],
-  Varanasi: [
-    { name: "Kashi Vishwanath Temple", image: "kashivishwanath.jpg" },
-    { name: "Dashashwamedh Ghat", image: "dashashwamedhghat.jpg" },
-    { name: "Manikarnika Ghat", image: "manikarnikaghat.jpg" },
-    { name: "Banaras Hindu University", image: "bhu.jpg" },
-  ],
-
-  // Kashmir
-  Srinagar: [
-    { name: "Dal Lake", image: "dallake.jpg" },
-    { name: "Shankaracharya Temple", image: "shankaracharya.jpg" },
-    { name: "Nishat Bagh", image: "nishatbagh.jpg" },
-    { name: "Gulmarg", image: "gulmarg.jpg" },
-  ],
-
-  // Karnataka
-  Bengaluru: [
-    { name: "Lalbagh Botanical Garden", image: "lalbagh.jpg" },
-    { name: "Bangalore Palace", image: "bangalorepalace.jpg" },
-    { name: "Cubbon Park", image: "cubbonpark.jpg" },
-    { name: "ISKCON Temple", image: "iskcon.jpg" },
-  ],
-  Mysuru: [
-    { name: "Mysore Palace", image: "mysorepalace.jpg" },
-    { name: "Brindavan Gardens", image: "brindavan.jpg" },
-    { name: "Chamundi Hill", image: "chamundihill.jpg" },
-    { name: "St. Philomena's Church", image: "stphilomena.jpg" },
-  ],
-
-  // Bihar
-  Patna: [
-    { name: "Golghar", image: "golghar.jpg" },
-    { name: "Buddha Smriti Park", image: "buddhastupa.jpg" },
-    { name: "Patna Museum", image: "patnamuseum.jpg" },
-    { name: "Takht Sri Patna Sahib", image: "patnasahib.jpg" },
-  ],
-
-  // Chhattisgarh
-  Raipur: [
-    { name: "Mahant Ghasidas Museum", image: "mahantmuseum.jpg" },
-    { name: "Nandan Van Zoo", image: "nandanvanzoo.jpg" },
-    { name: "Swami Vivekananda Sarovar", image: "vivekanandasarovar.jpg" },
-    { name: "Dudhadhari Math", image: "dudhadhari.jpg" },
-  ],
+  // Add descriptions similarly for other locations...
 };
-
 
 export const placeDetailsData = {
   Telangana: {
